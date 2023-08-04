@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "1adbe648-bb82-4114-b0a5-a72cda3b6419",
+		"name": "Genci",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23038556"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\"fname\" : \"Amit\",\r\n\"lname\" : \"Kumar\", \r\n \"email\" : \"amitkumar.tmsl@gmail.com\", \r\n     \"nationality\" : \"Indian\",\r\n     \"age\" : 23,\r\n     \"gender\" : \"Male\", \r\n     \"countryCode\" : \"+91\",\r\n     \"contactNumber\" : 7782865144, \r\n     \"password\" : \"amit@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Signup Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n\"fname\" : \"Amit\",\r\n\"lname\" : \"Kumar\", \r\n \"email\" : \"amitkumar.tmsl@gmail.com\", \r\n     \"nationality\" : \"Indian\",\r\n     \"age\" : 23,\r\n     \"gender\" : \"Male\", \r\n     \"countryCode\" : \"+91\",\r\n     \"contactNumber\" : 7782865144, \r\n     \"password\" : \"amit@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/signup",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "841"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"349-eggqWrNJn0W+AFlYpqu/4X9gK4Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Aug 2023 18:04:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Verification Email sent to your mail id\",\n    \"info\": {\n        \"accepted\": [\n            \"amitkumar.tmsl@gmail.com\"\n        ],\n        \"rejected\": [],\n        \"ehlo\": [\n            \"SIZE 35882577\",\n            \"8BITMIME\",\n            \"AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH\",\n            \"ENHANCEDSTATUSCODES\",\n            \"PIPELINING\",\n            \"CHUNKING\",\n            \"SMTPUTF8\"\n        ],\n        \"envelopeTime\": 919,\n        \"messageTime\": 737,\n        \"messageSize\": 611,\n        \"response\": \"250 2.0.0 OK  1690999459 ji11-20020a170903324b00b001b8a897cd26sm12679573plb.195 - gsmtp\",\n        \"envelope\": {\n            \"from\": \"amitkumar.tmsl@gmail.com\",\n            \"to\": [\n                \"amitkumar.tmsl@gmail.com\"\n            ]\n        },\n        \"messageId\": \"<ca6bad54-873e-46be-54a4-41f538c63a86@gmail.com>\"\n    },\n    \"Link\": \"http://127.0.0.1/3005/api/verifyemail/64ca9aa17a79f1e77a2e919d/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NGNhOWFhMTdhNzlmMWU3N2EyZTkxOWQiLCJpYXQiOjE2OTA5OTk0NTcsImV4cCI6MTY5MTAwMDM1N30.NrsKt29B2h1Qb6Yxcw49gvOyPyUKS3XJ-wAeNPEJ_QM\"\n}"
+						},
+						{
+							"name": "Signup Success with 3 feilds",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n\"fname\" : \"Amit\", \r\n\"email\" : \"amitkumarsonu8092@gmail.com\",\r\n\"password\" : \"amit@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/signup",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "845"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34d-byDzKbP+z7/zxFUGVttgp7cKsu0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Aug 2023 18:02:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Verification Email sent to your mail id\",\n    \"info\": {\n        \"accepted\": [\n            \"amitkumarsonu8092@gmail.com\"\n        ],\n        \"rejected\": [],\n        \"ehlo\": [\n            \"SIZE 35882577\",\n            \"8BITMIME\",\n            \"AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH\",\n            \"ENHANCEDSTATUSCODES\",\n            \"PIPELINING\",\n            \"CHUNKING\",\n            \"SMTPUTF8\"\n        ],\n        \"envelopeTime\": 880,\n        \"messageTime\": 760,\n        \"messageSize\": 614,\n        \"response\": \"250 2.0.0 OK  1690999324 ge21-20020a17090b0e1500b00268188ea4b9sm1369384pjb.19 - gsmtp\",\n        \"envelope\": {\n            \"from\": \"amitkumar.tmsl@gmail.com\",\n            \"to\": [\n                \"amitkumarsonu8092@gmail.com\"\n            ]\n        },\n        \"messageId\": \"<9c15b56b-d94e-5993-4433-cca615439c8a@gmail.com>\"\n    },\n    \"Link\": \"http://127.0.0.1/3005/api/verifyemail/64ca9a1a7a79f1e77a2e9195/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NGNhOWExYTdhNzlmMWU3N2EyZTkxOTUiLCJpYXQiOjE2OTA5OTkzMjIsImV4cCI6MTY5MTAwMDIyMn0.rMF3ANnYUFrxGl3_NaM8CEHi9wcWNFGwGf6iR83hjiY\"\n}"
+						},
+						{
+							"name": "feild Missing",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n\"fname\" : \"Amit\", \r\n\"email\" : \"amitkumarsonu8092@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/signup",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-0gwH9gizm/XFPHIoUZoRBxtTXr0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Aug 2023 18:02:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"field is missing in Signup\"\n}"
+						},
+						{
+							"name": "email Already taken",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n\"fname\" : \"Amit\",\r\n\"lname\" : \"Kumar\", \r\n \"email\" : \"amitkumar.tmsl@gmail.com\", \r\n     \"nationality\" : \"Indian\",\r\n     \"age\" : 23,\r\n     \"gender\" : \"Male\", \r\n     \"countryCode\" : \"+91\",\r\n     \"contactNumber\" : 7782865144, \r\n     \"password\" : \"amit@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/signup",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-SG86AeVephR8rYBolo9ay6pc2qA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Aug 2023 18:05:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"email already taken! Try another one\"\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:3005",
+			"type": "string"
+		}
+	]
+}
