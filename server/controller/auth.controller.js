@@ -16,7 +16,7 @@ exports.signup = async (req, res) => {
       contactNumber,
       password,
     } = req.body;
-    
+
     if (!fname || !email || !password) {
       return res
         .status(400)
@@ -46,11 +46,10 @@ exports.signup = async (req, res) => {
       const token = jwt.sign({ userID: user._id }, secret, {
         expiresIn: "15m",
       });
-
-      const link = `${process.env.REACT_BASE_URL}/api/verifyemail/${user._id}/${token}`;
+      const link = `${process.env.REACT_BASE_URL}/emailverifiedpage?userId=${user._id}&token=${token}`;
       console.log(link);
       let transporter = nodemailer.createTransport({
-        host: process.env.EMAIL_HOST,
+        host: process.env.EMAIL_HOST, 
         port: process.env.EMAIL_PORT,
         secure: true,
         auth: {
@@ -64,14 +63,12 @@ exports.signup = async (req, res) => {
         subject: "Please Verify Your Email",
         html: `<a href = ${link}>click here <a/>to verify your email `,
       });
-      res
-        .status(200)
-        .json({
-          status: "success",
-          message: "Verification Email sent to your mail id",
-          info: info,
-          Link: link,
-        });
+      res.status(200).json({
+        status: "success",
+        message: "Verification Email sent to your mail id",
+        info: info,
+        Link: link,
+      });
     }
   } catch (error) {
     res
